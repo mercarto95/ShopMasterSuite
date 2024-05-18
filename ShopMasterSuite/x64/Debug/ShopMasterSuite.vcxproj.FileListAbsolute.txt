@@ -1,0 +1,4 @@
+D:\ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.vcxproj.AssemblyReference.cache
+D:\ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.LoginForm.resources
+D:\ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.vcxproj.GenerateResource.cache
+D:\ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.exe
