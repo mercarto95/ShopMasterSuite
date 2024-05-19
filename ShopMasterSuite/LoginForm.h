@@ -1,5 +1,9 @@
 #pragma once
 
+#include "Include/Common.h"
+
+#include <iostream>
+
 namespace ShopMasterSuite {
 
 	using namespace System;
@@ -101,13 +105,6 @@ namespace ShopMasterSuite {
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(LoginForm::typeid));
 			this->pnl_mainLogin = (gcnew System::Windows::Forms::Panel());
-			this->pnl_login_manager = (gcnew System::Windows::Forms::Panel());
-			this->btn_login_manager_login = (gcnew System::Windows::Forms::Button());
-			this->lbl_login_manager_passWord = (gcnew System::Windows::Forms::Label());
-			this->lbl_login_manager_id = (gcnew System::Windows::Forms::Label());
-			this->txtBox_login_manager_passWord = (gcnew System::Windows::Forms::TextBox());
-			this->txtBox_login_manager_id = (gcnew System::Windows::Forms::TextBox());
-			this->btn_login_manager_close = (gcnew System::Windows::Forms::Button());
 			this->pnl_login_leader = (gcnew System::Windows::Forms::Panel());
 			this->btn_login_leader_login = (gcnew System::Windows::Forms::Button());
 			this->lbl_login_leader_pass = (gcnew System::Windows::Forms::Label());
@@ -115,6 +112,13 @@ namespace ShopMasterSuite {
 			this->txtBox_login_leader_passWord = (gcnew System::Windows::Forms::TextBox());
 			this->txtBox_login_leader_id = (gcnew System::Windows::Forms::TextBox());
 			this->btn_login_leader_close = (gcnew System::Windows::Forms::Button());
+			this->pnl_login_manager = (gcnew System::Windows::Forms::Panel());
+			this->btn_login_manager_login = (gcnew System::Windows::Forms::Button());
+			this->lbl_login_manager_passWord = (gcnew System::Windows::Forms::Label());
+			this->lbl_login_manager_id = (gcnew System::Windows::Forms::Label());
+			this->txtBox_login_manager_passWord = (gcnew System::Windows::Forms::TextBox());
+			this->txtBox_login_manager_id = (gcnew System::Windows::Forms::TextBox());
+			this->btn_login_manager_close = (gcnew System::Windows::Forms::Button());
 			this->pnl_login_footer = (gcnew System::Windows::Forms::Panel());
 			this->lbl_login_date = (gcnew System::Windows::Forms::Label());
 			this->lbl_login_time = (gcnew System::Windows::Forms::Label());
@@ -126,8 +130,8 @@ namespace ShopMasterSuite {
 			this->btn_login_leader = (gcnew System::Windows::Forms::Button());
 			this->timer_time_login = (gcnew System::Windows::Forms::Timer(this->components));
 			this->pnl_mainLogin->SuspendLayout();
-			this->pnl_login_manager->SuspendLayout();
 			this->pnl_login_leader->SuspendLayout();
+			this->pnl_login_manager->SuspendLayout();
 			this->pnl_login_footer->SuspendLayout();
 			this->pnl_login_logo->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->picBox_login_logo))->BeginInit();
@@ -138,8 +142,8 @@ namespace ShopMasterSuite {
 			this->pnl_mainLogin->AccessibleName = L"pnl_mainLogin";
 			this->pnl_mainLogin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
 				static_cast<System::Int32>(static_cast<System::Byte>(56)));
-			this->pnl_mainLogin->Controls->Add(this->pnl_login_manager);
 			this->pnl_mainLogin->Controls->Add(this->pnl_login_leader);
+			this->pnl_mainLogin->Controls->Add(this->pnl_login_manager);
 			this->pnl_mainLogin->Controls->Add(this->pnl_login_footer);
 			this->pnl_mainLogin->Controls->Add(this->pnl_login_logo);
 			this->pnl_mainLogin->Controls->Add(this->btn_login_manager);
@@ -150,6 +154,114 @@ namespace ShopMasterSuite {
 			this->pnl_mainLogin->Name = L"pnl_mainLogin";
 			this->pnl_mainLogin->Size = System::Drawing::Size(801, 619);
 			this->pnl_mainLogin->TabIndex = 0;
+			// 
+			// pnl_login_leader
+			// 
+			this->pnl_login_leader->AccessibleName = L"pnl_login_leader";
+			this->pnl_login_leader->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(22)), static_cast<System::Int32>(static_cast<System::Byte>(5)),
+				static_cast<System::Int32>(static_cast<System::Byte>(33)));
+			this->pnl_login_leader->Controls->Add(this->btn_login_leader_login);
+			this->pnl_login_leader->Controls->Add(this->lbl_login_leader_pass);
+			this->pnl_login_leader->Controls->Add(this->lbl_login_leader);
+			this->pnl_login_leader->Controls->Add(this->txtBox_login_leader_passWord);
+			this->pnl_login_leader->Controls->Add(this->txtBox_login_leader_id);
+			this->pnl_login_leader->Controls->Add(this->btn_login_leader_close);
+			this->pnl_login_leader->Location = System::Drawing::Point(176, 31);
+			this->pnl_login_leader->Name = L"pnl_login_leader";
+			this->pnl_login_leader->Size = System::Drawing::Size(481, 509);
+			this->pnl_login_leader->TabIndex = 3;
+			this->pnl_login_leader->Visible = false;
+			// 
+			// btn_login_leader_login
+			// 
+			this->btn_login_leader_login->AccessibleName = L"btn_login_leader_login";
+			this->btn_login_leader_login->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn_login_leader_login->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn_login_leader_login->Font = (gcnew System::Drawing::Font(L"MS PGothic", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btn_login_leader_login->Location = System::Drawing::Point(69, 280);
+			this->btn_login_leader_login->Name = L"btn_login_leader_login";
+			this->btn_login_leader_login->Size = System::Drawing::Size(331, 114);
+			this->btn_login_leader_login->TabIndex = 3;
+			this->btn_login_leader_login->Text = L"Login";
+			this->btn_login_leader_login->UseVisualStyleBackColor = true;
+			this->btn_login_leader_login->Click += gcnew System::EventHandler(this, &LoginForm::btn_login_leader_login_Click);
+			// 
+			// lbl_login_leader_pass
+			// 
+			this->lbl_login_leader_pass->AccessibleName = L"lbl_login_leader_pass";
+			this->lbl_login_leader_pass->AutoSize = true;
+			this->lbl_login_leader_pass->Font = (gcnew System::Drawing::Font(L"MS PGothic", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbl_login_leader_pass->Location = System::Drawing::Point(72, 175);
+			this->lbl_login_leader_pass->Name = L"lbl_login_leader_pass";
+			this->lbl_login_leader_pass->Size = System::Drawing::Size(114, 24);
+			this->lbl_login_leader_pass->TabIndex = 2;
+			this->lbl_login_leader_pass->Text = L"Password";
+			this->lbl_login_leader_pass->Click += gcnew System::EventHandler(this, &LoginForm::label2_Click);
+			// 
+			// lbl_login_leader
+			// 
+			this->lbl_login_leader->AccessibleName = L"lbl_login_leader";
+			this->lbl_login_leader->AutoSize = true;
+			this->lbl_login_leader->Font = (gcnew System::Drawing::Font(L"MS PGothic", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lbl_login_leader->Location = System::Drawing::Point(72, 72);
+			this->lbl_login_leader->Name = L"lbl_login_leader";
+			this->lbl_login_leader->Size = System::Drawing::Size(116, 24);
+			this->lbl_login_leader->TabIndex = 2;
+			this->lbl_login_leader->Text = L"Leader ID";
+			// 
+			// txtBox_login_leader_passWord
+			// 
+			this->txtBox_login_leader_passWord->AccessibleName = L"txtBox_login_leader_passWord";
+			this->txtBox_login_leader_passWord->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(44)),
+				static_cast<System::Int32>(static_cast<System::Byte>(33)), static_cast<System::Int32>(static_cast<System::Byte>(51)));
+			this->txtBox_login_leader_passWord->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->txtBox_login_leader_passWord->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->txtBox_login_leader_passWord->Font = (gcnew System::Drawing::Font(L"MS PGothic", 26.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->txtBox_login_leader_passWord->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->txtBox_login_leader_passWord->Location = System::Drawing::Point(72, 211);
+			this->txtBox_login_leader_passWord->Name = L"txtBox_login_leader_passWord";
+			this->txtBox_login_leader_passWord->Size = System::Drawing::Size(329, 35);
+			this->txtBox_login_leader_passWord->TabIndex = 1;
+			this->txtBox_login_leader_passWord->Text = L"5555";
+			this->txtBox_login_leader_passWord->UseSystemPasswordChar = true;
+			this->txtBox_login_leader_passWord->Click += gcnew System::EventHandler(this, &LoginForm::txtBox_login_leader_passWord_Click);
+			// 
+			// txtBox_login_leader_id
+			// 
+			this->txtBox_login_leader_id->AccessibleName = L"txtBox_login_leader_id";
+			this->txtBox_login_leader_id->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(44)),
+				static_cast<System::Int32>(static_cast<System::Byte>(33)), static_cast<System::Int32>(static_cast<System::Byte>(51)));
+			this->txtBox_login_leader_id->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->txtBox_login_leader_id->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->txtBox_login_leader_id->Font = (gcnew System::Drawing::Font(L"MS PGothic", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->txtBox_login_leader_id->ForeColor = System::Drawing::SystemColors::ButtonShadow;
+			this->txtBox_login_leader_id->Location = System::Drawing::Point(72, 108);
+			this->txtBox_login_leader_id->Name = L"txtBox_login_leader_id";
+			this->txtBox_login_leader_id->Size = System::Drawing::Size(329, 35);
+			this->txtBox_login_leader_id->TabIndex = 1;
+			this->txtBox_login_leader_id->Text = L"0123";
+			this->txtBox_login_leader_id->Click += gcnew System::EventHandler(this, &LoginForm::txtBox_login_leader_id_Click);
+			this->txtBox_login_leader_id->TextChanged += gcnew System::EventHandler(this, &LoginForm::txtBox_login_leader_id_TextChanged);
+			// 
+			// btn_login_leader_close
+			// 
+			this->btn_login_leader_close->AccessibleName = L"#160521";
+			this->btn_login_leader_close->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn_login_leader_close->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn_login_leader_close->Font = (gcnew System::Drawing::Font(L"MS PGothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btn_login_leader_close->Location = System::Drawing::Point(353, 456);
+			this->btn_login_leader_close->Name = L"btn_login_leader_close";
+			this->btn_login_leader_close->Size = System::Drawing::Size(115, 41);
+			this->btn_login_leader_close->TabIndex = 0;
+			this->btn_login_leader_close->Text = L"close";
+			this->btn_login_leader_close->UseVisualStyleBackColor = true;
+			this->btn_login_leader_close->Click += gcnew System::EventHandler(this, &LoginForm::btn_login_leader_close_Click);
 			// 
 			// pnl_login_manager
 			// 
@@ -222,6 +334,7 @@ namespace ShopMasterSuite {
 			this->txtBox_login_manager_passWord->Size = System::Drawing::Size(329, 35);
 			this->txtBox_login_manager_passWord->TabIndex = 1;
 			this->txtBox_login_manager_passWord->Text = L"5555";
+			this->txtBox_login_manager_passWord->UseSystemPasswordChar = true;
 			this->txtBox_login_manager_passWord->Click += gcnew System::EventHandler(this, &LoginForm::txtBox_login_manager_passWord_Click);
 			this->txtBox_login_manager_passWord->TextChanged += gcnew System::EventHandler(this, &LoginForm::txtBox_login_manager_passWord_TextChanged);
 			// 
@@ -256,111 +369,6 @@ namespace ShopMasterSuite {
 			this->btn_login_manager_close->Text = L"close";
 			this->btn_login_manager_close->UseVisualStyleBackColor = true;
 			this->btn_login_manager_close->Click += gcnew System::EventHandler(this, &LoginForm::btn_login_manager_close_Click);
-			// 
-			// pnl_login_leader
-			// 
-			this->pnl_login_leader->AccessibleName = L"pnl_login_leader";
-			this->pnl_login_leader->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(22)), static_cast<System::Int32>(static_cast<System::Byte>(5)),
-				static_cast<System::Int32>(static_cast<System::Byte>(33)));
-			this->pnl_login_leader->Controls->Add(this->btn_login_leader_login);
-			this->pnl_login_leader->Controls->Add(this->lbl_login_leader_pass);
-			this->pnl_login_leader->Controls->Add(this->lbl_login_leader);
-			this->pnl_login_leader->Controls->Add(this->txtBox_login_leader_passWord);
-			this->pnl_login_leader->Controls->Add(this->txtBox_login_leader_id);
-			this->pnl_login_leader->Controls->Add(this->btn_login_leader_close);
-			this->pnl_login_leader->Location = System::Drawing::Point(176, 31);
-			this->pnl_login_leader->Name = L"pnl_login_leader";
-			this->pnl_login_leader->Size = System::Drawing::Size(481, 509);
-			this->pnl_login_leader->TabIndex = 3;
-			this->pnl_login_leader->Visible = false;
-			// 
-			// btn_login_leader_login
-			// 
-			this->btn_login_leader_login->AccessibleName = L"btn_login_leader_login";
-			this->btn_login_leader_login->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btn_login_leader_login->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btn_login_leader_login->Font = (gcnew System::Drawing::Font(L"MS PGothic", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btn_login_leader_login->Location = System::Drawing::Point(69, 280);
-			this->btn_login_leader_login->Name = L"btn_login_leader_login";
-			this->btn_login_leader_login->Size = System::Drawing::Size(331, 114);
-			this->btn_login_leader_login->TabIndex = 3;
-			this->btn_login_leader_login->Text = L"Login";
-			this->btn_login_leader_login->UseVisualStyleBackColor = true;
-			// 
-			// lbl_login_leader_pass
-			// 
-			this->lbl_login_leader_pass->AccessibleName = L"lbl_login_leader_pass";
-			this->lbl_login_leader_pass->AutoSize = true;
-			this->lbl_login_leader_pass->Font = (gcnew System::Drawing::Font(L"MS PGothic", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lbl_login_leader_pass->Location = System::Drawing::Point(72, 175);
-			this->lbl_login_leader_pass->Name = L"lbl_login_leader_pass";
-			this->lbl_login_leader_pass->Size = System::Drawing::Size(114, 24);
-			this->lbl_login_leader_pass->TabIndex = 2;
-			this->lbl_login_leader_pass->Text = L"Password";
-			this->lbl_login_leader_pass->Click += gcnew System::EventHandler(this, &LoginForm::label2_Click);
-			// 
-			// lbl_login_leader
-			// 
-			this->lbl_login_leader->AccessibleName = L"lbl_login_leader";
-			this->lbl_login_leader->AutoSize = true;
-			this->lbl_login_leader->Font = (gcnew System::Drawing::Font(L"MS PGothic", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lbl_login_leader->Location = System::Drawing::Point(72, 72);
-			this->lbl_login_leader->Name = L"lbl_login_leader";
-			this->lbl_login_leader->Size = System::Drawing::Size(116, 24);
-			this->lbl_login_leader->TabIndex = 2;
-			this->lbl_login_leader->Text = L"Leader ID";
-			// 
-			// txtBox_login_leader_passWord
-			// 
-			this->txtBox_login_leader_passWord->AccessibleName = L"txtBox_login_leader_passWord";
-			this->txtBox_login_leader_passWord->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(44)),
-				static_cast<System::Int32>(static_cast<System::Byte>(33)), static_cast<System::Int32>(static_cast<System::Byte>(51)));
-			this->txtBox_login_leader_passWord->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->txtBox_login_leader_passWord->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->txtBox_login_leader_passWord->Font = (gcnew System::Drawing::Font(L"MS PGothic", 26.25F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->txtBox_login_leader_passWord->ForeColor = System::Drawing::SystemColors::ButtonShadow;
-			this->txtBox_login_leader_passWord->Location = System::Drawing::Point(72, 211);
-			this->txtBox_login_leader_passWord->Name = L"txtBox_login_leader_passWord";
-			this->txtBox_login_leader_passWord->Size = System::Drawing::Size(329, 35);
-			this->txtBox_login_leader_passWord->TabIndex = 1;
-			this->txtBox_login_leader_passWord->Text = L"5555";
-			this->txtBox_login_leader_passWord->Click += gcnew System::EventHandler(this, &LoginForm::txtBox_login_leader_passWord_Click);
-			// 
-			// txtBox_login_leader_id
-			// 
-			this->txtBox_login_leader_id->AccessibleName = L"txtBox_login_leader_id";
-			this->txtBox_login_leader_id->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(44)),
-				static_cast<System::Int32>(static_cast<System::Byte>(33)), static_cast<System::Int32>(static_cast<System::Byte>(51)));
-			this->txtBox_login_leader_id->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->txtBox_login_leader_id->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->txtBox_login_leader_id->Font = (gcnew System::Drawing::Font(L"MS PGothic", 26.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->txtBox_login_leader_id->ForeColor = System::Drawing::SystemColors::ButtonShadow;
-			this->txtBox_login_leader_id->Location = System::Drawing::Point(72, 108);
-			this->txtBox_login_leader_id->Name = L"txtBox_login_leader_id";
-			this->txtBox_login_leader_id->Size = System::Drawing::Size(329, 35);
-			this->txtBox_login_leader_id->TabIndex = 1;
-			this->txtBox_login_leader_id->Text = L"0123";
-			this->txtBox_login_leader_id->Click += gcnew System::EventHandler(this, &LoginForm::txtBox_login_leader_id_Click);
-			// 
-			// btn_login_leader_close
-			// 
-			this->btn_login_leader_close->AccessibleName = L"#160521";
-			this->btn_login_leader_close->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btn_login_leader_close->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btn_login_leader_close->Font = (gcnew System::Drawing::Font(L"MS PGothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btn_login_leader_close->Location = System::Drawing::Point(353, 456);
-			this->btn_login_leader_close->Name = L"btn_login_leader_close";
-			this->btn_login_leader_close->Size = System::Drawing::Size(115, 41);
-			this->btn_login_leader_close->TabIndex = 0;
-			this->btn_login_leader_close->Text = L"close";
-			this->btn_login_leader_close->UseVisualStyleBackColor = true;
-			this->btn_login_leader_close->Click += gcnew System::EventHandler(this, &LoginForm::btn_login_leader_close_Click);
 			// 
 			// pnl_login_footer
 			// 
@@ -502,10 +510,10 @@ namespace ShopMasterSuite {
 			this->SizeGripStyle = System::Windows::Forms::SizeGripStyle::Hide;
 			this->Text = L"Shop Master Suite";
 			this->pnl_mainLogin->ResumeLayout(false);
-			this->pnl_login_manager->ResumeLayout(false);
-			this->pnl_login_manager->PerformLayout();
 			this->pnl_login_leader->ResumeLayout(false);
 			this->pnl_login_leader->PerformLayout();
+			this->pnl_login_manager->ResumeLayout(false);
+			this->pnl_login_manager->PerformLayout();
 			this->pnl_login_footer->ResumeLayout(false);
 			this->pnl_login_footer->PerformLayout();
 			this->pnl_login_logo->ResumeLayout(false);
@@ -565,5 +573,35 @@ private: System::Void btn_login_manager_Click(System::Object^ sender, System::Ev
 }
 private: System::Void txtBox_login_manager_passWord_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
+private: System::Void btn_login_leader_login_Click(System::Object^ sender, System::EventArgs^ e) {
+	//checkInputValidationIntegers(txtBox_login_leader_id->Text);
+	std::string a = "my name is kiung0";
+
+	std::cout << a << std::endl;
+}
+private: System::Void txtBox_login_leader_id_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	
+	if (txtBox_login_leader_id->Text != "")
+	{
+		std::string myString = convertVisualStringToStdString(txtBox_login_leader_id->Text);
+
+		std::string tmp; 
+
+		for (auto c : myString) {
+			if (!isalpha(c))
+			{
+				tmp += c;
+
+			}
+			else {
+				txtBox_login_leader_id->Text = convertStdStringToVisualString(tmp);
+				txtBox_login_leader_id->SelectionLength = tmp.length();
+				txtBox_login_leader_id->Focus();
+			}
+		}
+	}
+
+}
 };
 }
+
