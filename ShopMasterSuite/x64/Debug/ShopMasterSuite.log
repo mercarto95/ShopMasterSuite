@@ -1,4 +1,4 @@
 ﻿  LoginForm.cpp
-D:\ShopMasterSuite\ShopMasterSuite\LoginForm.h(598,57): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\ShopMasterSuite\ShopMasterSuite\LoginForm.h(46,42): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   LoginForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   ShopMasterSuite.vcxproj -> D:\ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.exe

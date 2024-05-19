@@ -30,6 +30,25 @@ namespace ShopMasterSuite {
 			timer_time_login->Start();
 		}
 
+		void validate_login_inputs(System::String^ input, System::Windows::Forms::TextBox^ txtBox)
+		{
+			std::string str_input = convertVisualStringToStdString(input);
+			std::string tmp;
+
+			for (auto c : str_input) {
+				if (!isalpha(c))
+				{
+					tmp += c;
+
+				}
+				else {
+					txtBox->Text = convertStdStringToVisualString(tmp);
+					txtBox->SelectionLength = tmp.length();
+					txtBox->Focus();
+				}
+			}
+		}
+
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -142,8 +161,8 @@ namespace ShopMasterSuite {
 			this->pnl_mainLogin->AccessibleName = L"pnl_mainLogin";
 			this->pnl_mainLogin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(11)),
 				static_cast<System::Int32>(static_cast<System::Byte>(56)));
-			this->pnl_mainLogin->Controls->Add(this->pnl_login_leader);
 			this->pnl_mainLogin->Controls->Add(this->pnl_login_manager);
+			this->pnl_mainLogin->Controls->Add(this->pnl_login_leader);
 			this->pnl_mainLogin->Controls->Add(this->pnl_login_footer);
 			this->pnl_mainLogin->Controls->Add(this->pnl_login_logo);
 			this->pnl_mainLogin->Controls->Add(this->btn_login_manager);
@@ -229,6 +248,7 @@ namespace ShopMasterSuite {
 			this->txtBox_login_leader_passWord->Text = L"5555";
 			this->txtBox_login_leader_passWord->UseSystemPasswordChar = true;
 			this->txtBox_login_leader_passWord->Click += gcnew System::EventHandler(this, &LoginForm::txtBox_login_leader_passWord_Click);
+			this->txtBox_login_leader_passWord->TextChanged += gcnew System::EventHandler(this, &LoginForm::txtBox_login_leader_passWord_TextChanged);
 			// 
 			// txtBox_login_leader_id
 			// 
@@ -354,6 +374,7 @@ namespace ShopMasterSuite {
 			this->txtBox_login_manager_id->TabIndex = 1;
 			this->txtBox_login_manager_id->Text = L"0123";
 			this->txtBox_login_manager_id->Click += gcnew System::EventHandler(this, &LoginForm::txtBox_login_manager_id_Click);
+			this->txtBox_login_manager_id->TextChanged += gcnew System::EventHandler(this, &LoginForm::txtBox_login_manager_id_TextChanged);
 			// 
 			// btn_login_manager_close
 			// 
@@ -572,6 +593,7 @@ private: System::Void btn_login_manager_Click(System::Object^ sender, System::Ev
 	}
 }
 private: System::Void txtBox_login_manager_passWord_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	this->validate_login_inputs(txtBox_login_manager_passWord->Text, txtBox_login_manager_passWord);
 }
 private: System::Void btn_login_leader_login_Click(System::Object^ sender, System::EventArgs^ e) {
 	//checkInputValidationIntegers(txtBox_login_leader_id->Text);
@@ -583,24 +605,15 @@ private: System::Void txtBox_login_leader_id_TextChanged(System::Object^ sender,
 	
 	if (txtBox_login_leader_id->Text != "")
 	{
-		std::string myString = convertVisualStringToStdString(txtBox_login_leader_id->Text);
-
-		std::string tmp; 
-
-		for (auto c : myString) {
-			if (!isalpha(c))
-			{
-				tmp += c;
-
-			}
-			else {
-				txtBox_login_leader_id->Text = convertStdStringToVisualString(tmp);
-				txtBox_login_leader_id->SelectionLength = tmp.length();
-				txtBox_login_leader_id->Focus();
-			}
-		}
+		this->validate_login_inputs(txtBox_login_leader_id->Text, txtBox_login_leader_id);
 	}
 
+}
+private: System::Void txtBox_login_leader_passWord_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	this->validate_login_inputs(txtBox_login_leader_passWord->Text, txtBox_login_leader_passWord);
+}
+private: System::Void txtBox_login_manager_id_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	this->validate_login_inputs(txtBox_login_manager_id->Text, txtBox_login_manager_id);
 }
 };
 }
