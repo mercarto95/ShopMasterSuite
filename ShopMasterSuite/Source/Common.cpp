@@ -35,3 +35,11 @@ System::String^ convertStdStringToVisualString(std::string my_string)
 {
 	return msclr::interop::marshal_as<System::String^>(my_string);
 }
+
+System::Void checkIfDigits(System::Windows::Forms::KeyPressEventArgs^ e)
+{
+	if (!Char::IsControl(e->KeyChar) && !Char::IsDigit(e->KeyChar))
+	{
+		e->Handled = true;
+	}
+}
