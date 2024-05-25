@@ -32,5 +32,147 @@
 *.app
 
 
-# ===============================================
+# Customes
 .vs/
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (Mono Auto Generated)
+mono_crash.*
+
+# User-specific folders
+.vscode/
+.vscode/*
+
+# Windows image file caches
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Windows files to avoid committing
+*.exe
+*.dll
+*.obj
+*.lib
+*.pdb
+*.ilk
+*.idb
+*.tlog
+*.log
+*.vspscc
+*.vsp
+*.ncb
+*.aps
+*.scc
+*.sbr
+*.tlb
+*.tlh
+*.bak
+*.backup
+*.cache
+*.pfx
+*.psess
+*.vspx
+*.vcxproj.user
+*.pdb
+*.ipch
+*.iobj
+*.ipdb
+*.res
+*.pch
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.la
+*.lib
+*.dll
+*.exp
+*.pdb
+*.log
+*.mdt
+*.mdd
+*.map
+*.dep
+
+# Visual Studio code snippets
+*.code-workspace
+
+# JetBrains Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# User-specific files
+.vscode/
+*.vscode
+*.code-workspace
+
+# Visual Studio
+.vs/
+.vscode/
+*.csproj.user
+*.csproj.nuget.dgspec.json
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+*.nupkg.metadata
+*.nupkg.signatures
+.vs/config/
+.vs/Server/
+.vs/slnx.sqlite
+.vs/**/*.db
+.vs/**/*.ini
+.vs/**/*.log
+.vs/**/*.xml
+.vs/**/*.suo
+.vs/**/*.v11.suo
+.vs/**/*.sln.docstates
+
+# Visual Studio Code
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# Windows dump files
+*.dmp
+
+# Windows error reporting
+*.wer
+
+# Exclude personal user files
+C:/User/Ahmedd/
+
+# Directories for Visual Studio data
+.vs/
+.vscode/
+Debug/
+Release/
+x64/Debug/
+x64/Release/
+build/
