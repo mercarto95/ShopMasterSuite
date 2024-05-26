@@ -2,3 +2,7 @@ D:\ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.vcxproj.AssemblyRef
 D:\ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.LoginForm.resources
 D:\ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.vcxproj.GenerateResource.cache
 D:\ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.exe
+D:\n_ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.vcxproj.AssemblyReference.cache
+D:\n_ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.LoginForm.resources
+D:\n_ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.vcxproj.GenerateResource.cache
+D:\n_ShopMasterSuite\ShopMasterSuite\x64\Debug\ShopMasterSuite.exe

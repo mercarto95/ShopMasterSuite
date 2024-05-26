@@ -26,5 +26,19 @@
     <ClInclude Include="Common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+
+
+    <ClInclude Include="DB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+
+    <ClInclude Include="sqlite3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+
+    <ClInclude Include="DB.cpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+
   </ItemGroup>
 </Project>

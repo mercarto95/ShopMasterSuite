@@ -142,6 +142,15 @@
     <ClCompile Include="Source\Common.cpp" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ClInclude Include="Include\DB.h" />
+    <ClCompile Include="Source\DB.cpp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClInclude Include="Include\DB\sqlite\sqlite3.h" />
+  </ItemGroup>
+
 
 
 

@@ -38,10 +38,10 @@
 C:/User/Ahmedd/
 
 # Directories for Visual Studio data
-.vs/
-.vscode/
-Debug/
-Release/
-x64/Debug/
-x64/Release/
-build/
+/.vs/
+/.vscode/
+/Debug/
+/Release/
+/x64/Debug/
+/x64/Release/
+/build/
